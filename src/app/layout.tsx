@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='h-screen'>
-        <nav className='h-1/6 bg-green-400 bg- w-full flex items-center p-4'>
-          NCR
+        <nav className='h-1/6 bg-ncrgreen bg- w-full flex items-center p-4'>
+          <Image src={'ncr-logo.svg'} alt='logo ncr' width={150} height={75} />
         </nav>
         <main className='h-5/6 bg-white w-full'>{children}</main>
       </body>
